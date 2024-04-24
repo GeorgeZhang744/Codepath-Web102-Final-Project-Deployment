@@ -61,7 +61,7 @@ const EditPostPage = () => {
       await supabase.from("Post").update({ title, postType, content, imgURL }).eq("id", postID);
 
       alert("Post updated successfully!");
-      window.location = `/post/${postID}/`;
+      window.location = `/post/${postID}`;
     } catch (err) {
       alert("Updating post failed. Error: " + err);
     }
